@@ -52,7 +52,6 @@ class CustomAudioHandler extends BaseAudioHandler {
             playing: playing,
             updatePosition: _player.position,
             bufferedPosition: _player.bufferedPosition,
-            // speed: _player.speed,
             queueIndex: queueIndex,
           ),
         );
@@ -176,34 +175,6 @@ class CustomAudioHandler extends BaseAudioHandler {
   @override
   Future<void> pause() => _player2.stop();
 
-  @override
-  Future<void> skipToNext() => _player.seekToNext();
-
-  @override
-  Future<void> skipToPrevious() => _player.seekToPrevious();
-
-  @override
-  Future<void> seek(Duration position) => _player.seek(position);
-
-  @override
-  Future<void> removeQueueItemAt(int index) => _playList.removeAt(index);
-
-  @override
-  Future<void> setRepeatMode(AudioServiceRepeatMode repeatMode) async {
-    switch (repeatMode) {
-      case AudioServiceRepeatMode.none:
-        await _player.setLoopMode(LoopMode.off);
-        break;
-      case AudioServiceRepeatMode.one:
-        await _player.setLoopMode(LoopMode.one);
-        break;
-      case AudioServiceRepeatMode.group:
-        break;
-      case AudioServiceRepeatMode.all:
-        await _player.setLoopMode(LoopMode.all);
-        break;
-    }
-  }
 
   @override
   Future<void> setShuffleMode(AudioServiceShuffleMode shuffleMode) async {

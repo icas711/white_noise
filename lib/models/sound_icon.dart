@@ -146,12 +146,7 @@ class SoundIconNotifier extends StateNotifier<SoundIconState> {
     await _audioHandler.customAction('startMix', {'queue': queue});
   }
 
-  void reOrderQueue(int oldIndex, int newIndex) {
-    _audioHandler
-        .customAction('reorder', {'oldIndex': oldIndex, 'newIndex': newIndex});
-  }
-
-  Future<void> setVolume1(double volume) async =>
+   Future<void> setVolume1(double volume) async =>
       _audioHandler.customAction('setVolume1', {'volume': volume});
 
   Future<void> setVolume2(double volume) async =>
@@ -159,14 +154,6 @@ class SoundIconNotifier extends StateNotifier<SoundIconState> {
 
   Future<dynamic> volumeStream() async =>
       _audioHandler.customAction('volumeStream');
-
-  Future<void> skipToNext() async => _audioHandler.skipToNext();
-
-  void skipToPrevious() => _audioHandler.skipToPrevious();
-
-  void skipToQueueItem(int index) => _audioHandler.skipToQueueItem(index);
-
-  void removeQueueItemAt(int index) => _audioHandler.removeQueueItemAt(index);
 
   void changeShuffleMode() {
     switch (state.shuffleMode) {
