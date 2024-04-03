@@ -1,16 +1,11 @@
 # white_noise
 
-A new Flutter project.
+Реальное приложение
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Чистейший riverpod: state, future, stream провайдеры.
 
-A few resources to get you started if this is your first Flutter project:
+Оказалось чуть быстрее, чем в реализации с bloc. И по размеру меньше.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Frame 138](https://github.com/icas711/white_noise/assets/50333299/5f6a4ca9-1cd4-47e2-b6ec-f0045794d8ab)
