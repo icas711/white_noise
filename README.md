@@ -1,4 +1,4 @@
-# white_noise
+# Flutter White noise app
 
 Реальное приложение
 
